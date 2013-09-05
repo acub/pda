@@ -1,5 +1,5 @@
-//var URL_AJAX = "https://4pay.com/widget/mobile/ajax_mobile.jsp";
-var URL_AJAX = "ajax_mobile.jsp";
+var URL_AJAX = "https://4pay.com/widget/mobile/ajax_mobile.jsp";
+//var URL_AJAX = "ajax_mobile.jsp";
 $(function() {
 	$('#bshow').click(function() {
 		$.getJSON("ajax_mobile.jsp",{action:"getTransactionDetail", transactId: "transactId", SID : "global_var.SID" }, function(json){
