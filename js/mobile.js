@@ -153,6 +153,11 @@ $(function() {
 		$.mobile.loading( "hide" );
 	}
 	
+	$(document).on('backbutton',function(e){
+		alert("back_BUTTON");
+//	     e.preventDefault();
+     // YOUR CODE GOES HERE
+     });
 	document.addEventListener("backbutton", backKeyDown, false); 
 
 	function backKeyDown() { 
