@@ -161,7 +161,8 @@ $(function() {
 	document.addEventListener("backbutton", backKeyDown, false); 
 
 	function backKeyDown() { 
-		startLoad();
+		alert("back_BUTTON2");
+		//startLoad();
 		// Call my back key code here.
 	    //$.mobile.changePage("#homepage", "slideup");
 	}
