@@ -1,0 +1,54 @@
+@CHARSET "UTF-8";
+
+.center_login{
+	position: relative;
+	top:20px;
+	width: 60%;
+	min-width: 240px;
+	margin: 0 auto;
+}
+
+#div_home{
+	padding: 20 pt;
+	text-align: center;
+	padding-top: 5pt;
+}
+
+#div_home A{
+	margin: 10pt auto;
+	width: 180pt;
+	height: 28pt;
+}
+
+.nav-glyphish-example .ui-btn .ui-icon {
+    width: 30px !important;
+    height: 30px !important;
+    margin-left: -15px !important;
+    box-shadow: none !important;
+    border-radius: 0px 0px 0px 0px !important;
+}
+.nav-glyphish-example .ui-btn .ui-btn-inner {
+    padding-top: 40px !important;
+}
+#chat .ui-icon {
+    background: url("img/chat2.png") no-repeat scroll 50% 50%  transparent;
+}
+#email .ui-icon {
+    background: url("img/18-envelope.png") no-repeat scroll 50% 50%  transparent;
+}
+#skull .ui-icon {
+    background: url("img/21-skull.png") no-repeat scroll 50% 50%  transparent;
+}
+#beer .ui-icon {
+    background: url("img/setup.png") no-repeat scroll 50% 50%  transparent;
+}
+
+#body .pay_group_text{
+	padding-left: 50px;
+}
+#body .pay_group{
+	max-width: 32px;
+	max-height: 32px;
+	padding-right: 40px;
+	top: 0.2em;
+}
