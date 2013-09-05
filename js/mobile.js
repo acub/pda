@@ -7,9 +7,11 @@ $(function() {
 		});
 
 	});
+
 	$('#bhide').click(function() { 
 		$("#themes").hide();
 	});
+
 	$('#option').click(function() {
 		$("#setup").show();
 	});
@@ -25,12 +27,12 @@ $(function() {
 		$("#header H1").text("4PAY");	
 		goHomePage();
 	});
+
 	$("#button_home").click(function() {
 		$(this).hide();
 		$("#back_button").hide();
 		goHomePage();
 	});
-
 	
 	$('#clickAdd').click(function() {
 		$("#setup").hide(function(){
@@ -153,11 +155,12 @@ $(function() {
 	
 	document.addEventListener("backbutton", backKeyDown, false); 
 
-
 	function backKeyDown() { 
 		startLoad();
 		// Call my back key code here.
 	    //$.mobile.changePage("#homepage", "slideup");
 	}
+
 	goHomePage();
+	
 });

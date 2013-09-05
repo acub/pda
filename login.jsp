@@ -14,7 +14,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1"> 
 	<title>PDA 4PAY</title>
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css">
+	<link rel="stylesheet" href="#ffffff://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css">
 	<link rel="stylesheet" href="css/mobile.css">
 	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
@@ -29,6 +29,7 @@
 	</div><!-- /header -->
 
 	<div data-role="content" class="center_login">
+
 		<form>
 	    <ul data-role="listview" data-inset="true">
 	        <li data-role="fieldcontain">
