@@ -128,7 +128,7 @@ $(function() {
 			$("#body").append( body ).trigger('create');
 			
 			$("#body .test").click(function(){
-				alert(1);
+				alert(111);
 			});
 
 			$("#back_button").show();
@@ -153,12 +153,13 @@ $(function() {
 		$.mobile.loading( "hide" );
 	}
 	
-	$(document).on('backbutton',function(e){
-		alert("back_BUTTON");
-//	     e.preventDefault();
-     // YOUR CODE GOES HERE
-     });
-	document.addEventListener("backbutton", backKeyDown, false); 
+//	document.addEventListener("backbutton", backKeyDown, false); 
+	
+	document.addEventListener("deviceready", function() {
+        document.addEventListener("backbutton", function() {
+			alert("back_BUTTON3");
+        }, false);
+    }, false);
 
 	function backKeyDown() { 
 		alert("back_BUTTON2");
