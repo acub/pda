@@ -1,6 +1,8 @@
 var URL_AJAX = "https://4pay.com/widget/mobile/ajax_mobile.jsp";
 //var URL_AJAX = "ajax_mobile.jsp";
 $(function() {
+	var backButtonFunction = goHomePage;
+
 	$('#bshow').click(function() {
 		$.getJSON("ajax_mobile.jsp",{action:"getTransactionDetail", transactId: "transactId", SID : "global_var.SID" }, function(json){
 			$("#themes").show();
@@ -152,21 +154,12 @@ $(function() {
 	function stopLoad(){
 		$.mobile.loading( "hide" );
 	}
-	
-//	document.addEventListener("backbutton", backKeyDown, false); 
-	
+
 	document.addEventListener("deviceready", function() {
         document.addEventListener("backbutton", function() {
-			alert("back_BUTTON3");
+			backButtonFunction();
         }, false);
     }, false);
-
-	function backKeyDown() { 
-		alert("back_BUTTON2");
-		//startLoad();
-		// Call my back key code here.
-	    //$.mobile.changePage("#homepage", "slideup");
-	}
 
 	goHomePage();
 	
