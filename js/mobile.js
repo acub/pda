@@ -1,5 +1,6 @@
 var URL_AJAX = "https://4pay.com/widget/mobile/ajax_mobile.jsp";
 //var URL_AJAX = "ajax_mobile.jsp";
+//var URL_AJAX = "http://localhost:8080/widget/ajax_mobile.jsp";
 $(function() {
 	var backButtonFunction = goHomePage;
 
@@ -154,13 +155,13 @@ $(function() {
 	function stopLoad(){
 		$.mobile.loading( "hide" );
 	}
-
+/*
 	document.addEventListener("deviceready", function() {
         document.addEventListener("backbutton", function() {
 			backButtonFunction();
         }, false);
     }, false);
-
+*/
 	goHomePage();
 	
 });
