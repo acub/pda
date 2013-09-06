@@ -89,7 +89,7 @@ $(function() {
 			var groupList = json.groupList;
 			for ( var i in groupList) {
 				var group = groupList[i];
-				str = str + "<li><a class='pay_group_text' href='payments.html' data-transition='slide'><img  src='" + group.icon + "' alt='' class='ui-li-icon ui-corner-none pay_group'>" + group.name + "</a></li>";
+				str = str + "<li><a class='pay_group_text' href='#' data-transition='slide'><img  src='" + group.icon + "' alt='' class='ui-li-icon ui-corner-none pay_group'>" + group.name + "</a></li>";
 			}
 			str = str + "</ul>"; 
 			
