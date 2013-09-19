@@ -52,3 +52,10 @@
 	max-width: 32px;
 	max-height: 32px;
 }
+
+#mypanel{
+	width: 100%;
+	box-shadow: 5px 0px 5px rgba(0, 0, 0, 0.15);
+	transform: translate3d(0px, 0px, 0px);
+	background: rgba(204, 204, 204, 1);
+}

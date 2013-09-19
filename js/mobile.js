@@ -1,23 +1,8 @@
-var URL_AJAX = "https://4pay.com/widget/mobile/ajax_mobile.jsp";
+//var URL_AJAX = "https://4pay.com/widget/mobile/ajax_mobile.jsp";
 //var URL_AJAX = "ajax_mobile.jsp";
-//var URL_AJAX = "http://localhost:8080/widget/ajax_mobile.jsp";
+var URL_AJAX = "http://localhost:8080/widget/ajax_mobile.jsp";
 $(function() {
 	var backButtonFunction = goHomePage;
-
-	$('#bshow').click(function() {
-		$.getJSON("ajax_mobile.jsp",{action:"getTransactionDetail", transactId: "transactId", SID : "global_var.SID" }, function(json){
-			$("#themes").show();
-		});
-
-	});
-
-	$('#bhide').click(function() { 
-		$("#themes").hide();
-	});
-
-	$('#option').click(function() {
-		$("#setup").show();
-	});
 
 	$('#clickPay').click(function() {
 		$("#list").hide(function(){
@@ -36,34 +21,39 @@ $(function() {
 		$("#back_button").hide();
 		goHomePage();
 	});
-	
-	$('#clickAdd').click(function() {
-		$("#setup").hide(function(){
-			getTransactionList();
-		});
-	});
 
+	$('#closePanel').click(function() {
+		$( "#mypanel" ).panel( "close" );
+	});
+	
+	$("#beer").click(function() {
+		$( "#mypanel" ).panel( "open" );
+	});
+	$("#chat").click(function() {
+		$("#body").animate({width:'toggle'},350);
+	});
+	
 	function goHomePage(){
 		$("#button_home").hide();
 		$("#body").empty();
 		
-		startLoad();
+		ajxaLoaderShow();
 		$.getJSON(URL_AJAX,{action:"getBalance" }, function(json){
 			$("#body").append("<div id='div_home'>" + 
 					"<h3>Ваш баланс</h3>" +
 					"<h1 id='balance_home'>" + json.balance + "</h1>" +
 					"<a href='#' data-role='button' data-theme='b'>Пополнить</a>" +
-					"<a href='#' data-role='button' data-theme='b'>Вывести</a>" + 
+					"<a id='clickOut' href='#' data-role='button' data-theme='b'>Вывести</a>" + 
 					"<a id='clickPayment' href='#' data-role='button' data-theme='e'>Оплатить</a>" + 
-					"<a href='#' data-role='button' data-theme='e'>Перевести</a>" + 
+					"<a id='clickTransfer' href='#' data-role='button' data-theme='e'>Перевести</a>" + 
 					"<a id='clickReport' href='#' data-role='button' data-theme='c'>Отчет</a>" + 
 					"</div>").trigger("create");
 				
 				$("#balance_home").click(function(){
-					startLoad();
+					ajxaLoaderShow();
 					$.getJSON(URL_AJAX,{action:"getBalance" }, function(json){
 						$("#balance_home").text(json.balance);
-						stopLoad();
+						ajxaLoaderHide();
 					});
 				});
 
@@ -73,9 +63,19 @@ $(function() {
 				$("#clickPayment").click(function(){
 					goPaymentGroupList();
 				});
+				$("#clickOut").click(function(){
+					$("#body").animate({width:'toggle'},350,function(){
+//						$("#body").empty();
+//						$("#body").append("TEST");
+//						$("#body").animate({width:'toggle'},350);
+//						$("#body").show("slide");
+					});
+				});
+
 				$("#button_logout").show();
 				
-				stopLoad();
+
+				ajxaLoaderHide();
 		});
 	}
 	
@@ -106,7 +106,7 @@ $(function() {
 		$("#header H1").text("Отчеты");	
 		$("#body").empty();
 		
-		startLoad();
+		ajxaLoaderShow();
 		$.getJSON(URL_AJAX,{action:"getTransactionList" }, function(json){
 			var body = "<ul data-role='listview' data-inset='false'>";
 			var test = 456;
@@ -136,13 +136,13 @@ $(function() {
 
 			$("#back_button").show();
 			$("#button_home").show();
-			stopLoad();
+			ajxaLoaderHide();
 		});
 		
 		$("#body").show();
 	}
 	
-	function startLoad(){
+	function ajxaLoaderShow(){
 		$.mobile.loading( "show", {
             text: "Loading...",
             textVisible: true,
@@ -152,7 +152,7 @@ $(function() {
 		});
 	}
 
-	function stopLoad(){
+	function ajxaLoaderHide(){
 		$.mobile.loading( "hide" );
 	}
 /*
@@ -162,6 +162,24 @@ $(function() {
         }, false);
     }, false);
 */
-	goHomePage();
+	function init(){
+		goHomePage();
+	}
+
+
+	function Pda4Pay() {
+		this.acubTest = function(){
+			alert("TEST");
+		};
+	}
+
+//		alert(1);
+//		var pda = new Pda4Pay();
+//		pda.acubTest();
+//		alert(2);
+	init();
 	
 });
+
+
+
