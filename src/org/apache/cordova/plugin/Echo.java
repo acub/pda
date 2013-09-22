@@ -25,7 +25,7 @@ public class Echo extends CordovaPlugin {
 
     private void echo(String message, CallbackContext callbackContext) {
         if (message != null && message.length() > 0) {
-            callbackContext.success(message + " " + new Date().toString());
+            callbackContext.success(message + " RRRR " + new Date().toString());
         } else {
             callbackContext.error("Expected one non-empty string argument.");
         }
