@@ -78,14 +78,14 @@ $(function() {
 					alert("plugin Start");
 					cordova.exec(
 						function(winParam){ 
-							alert(winParam); 
+							alert("SUCCES TEST!"); 
 						}, 
 						function(error){ 
-							alert(error) 
+							alert("ERROR TEST!"); 
 						}, 
 						"Echo", 
 						"echo",
-						["firstArgument", "secondArgument", 42, false]
+						["arturPlugin WIN!"]
 					);
 					alert("plugin Stop");
 				});
