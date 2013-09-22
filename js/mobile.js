@@ -75,7 +75,19 @@ $(function() {
 				$("#button_logout").show();
 
 				$("#clickPlugin").click(function(){
-					alert("plugin");
+					alert("plugin Start");
+					cordova.exec(
+						function(winParam){ 
+							alert(winParam); 
+						}, 
+						function(error){ 
+							alert(error) 
+						}, 
+						"Echo", 
+						"echo",
+						["firstArgument", "secondArgument", 42, false]
+					);
+					alert("plugin Stop");
 				});
 
 
