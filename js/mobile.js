@@ -42,7 +42,7 @@ $(function() {
 			$("#body").append("<div id='div_home'>" + 
 					"<h3>Ваш баланс</h3>" +
 					"<h1 id='balance_home'>" + json.balance + "</h1>" +
-					"<a href='#' data-role='button' data-theme='b'>Пополнить</a>" +
+					"<a id='clickPlugin' href='#' data-role='button' data-theme='b'>Plugin-Test</a>" +
 					"<a id='clickOut' href='#' data-role='button' data-theme='b'>Вывести</a>" + 
 					"<a id='clickPayment' href='#' data-role='button' data-theme='e'>Оплатить</a>" + 
 					"<a id='clickTransfer' href='#' data-role='button' data-theme='e'>Перевести</a>" + 
@@ -73,7 +73,11 @@ $(function() {
 				});
 
 				$("#button_logout").show();
-				
+
+				$("#clickPlugin").click(function(){
+					alert("plugin");
+				});
+
 
 				ajxaLoaderHide();
 		});
