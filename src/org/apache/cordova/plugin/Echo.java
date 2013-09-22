@@ -6,6 +6,7 @@ import org.apache.cordova.CallbackContext;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import java.util.Date;
 
 /**
  * This class echoes a string called from JavaScript.
@@ -24,7 +25,7 @@ public class Echo extends CordovaPlugin {
 
     private void echo(String message, CallbackContext callbackContext) {
         if (message != null && message.length() > 0) {
-            callbackContext.success(message);
+            callbackContext.success(message + " " + new Date().toString());
         } else {
             callbackContext.error("Expected one non-empty string argument.");
         }

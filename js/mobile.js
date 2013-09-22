@@ -78,7 +78,7 @@ $(function() {
 					alert("plugin Start");
 					cordova.exec(
 						function(winParam){ 
-							alert("SUCCES TEST!"); 
+							alert("SUCCES TEST!" + winParam); 
 						}, 
 						function(error){ 
 							alert("ERROR TEST!"); 
