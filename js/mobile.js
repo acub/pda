@@ -1,8 +1,8 @@
-var URL_AJAX = "https://4pay.com/widget/ajax_mobile.jsp";
+//var URL_AJAX = "https://4pay.com/widget/ajax_mobile.jsp";
 //var URL_AJAX = "ajax_mobile.jsp";
-//var URL_AJAX = "http://localhost:8080/widget/ajax_mobile.jsp";
+var URL_AJAX = "http://localhost:8080/widget/ajax_mobile.jsp";
 $(function() {
-	var backButtonFunction = goHomePage;
+	var backButtonFunction = goHomePage; /* test2 */
 
 	$('#clickPay').click(function() {
 		$("#list").hide(function(){
@@ -125,7 +125,6 @@ $(function() {
 		ajxaLoaderShow();
 		$.getJSON(URL_AJAX,{action:"getTransactionList" }, function(json){
 			var body = "<ul data-role='listview' data-inset='false'>";
-			var test = 456;
 			var intervalArray = json.intervalArray;
 			for ( var i in intervalArray) {
 				var interval = intervalArray[i];
@@ -142,6 +141,8 @@ $(function() {
 	        		"</a></li>";
 				}				
 			}
+			
+			body = body + "<li class='load-more'><a href='#'>Загрузить еще..</a></li>";
 
 			body = body + "</ul>";
 			$("#body").append( body ).trigger('create');
@@ -194,7 +195,6 @@ $(function() {
 //		pda.acubTest();
 //		alert(2);
 	init();
-	
 });
 
 
