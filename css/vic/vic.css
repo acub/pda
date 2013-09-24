@@ -1,0 +1,68 @@
+@CHARSET "UTF-8";
+BODY{
+	background-color: grey;
+}
+.vic1{
+	background: url(img/pic01.png) no-repeat;	
+}
+
+.vic1.pic1{
+	background-position: 0 0;
+	width: 150px;
+	height: 150px;
+}
+.vic1.pic2{
+	background-position: -150px 0;
+	width: 150px;
+	height: 150px;
+}
+.vic1.pic3{
+	background-position: -300px 0;
+	width: 150px;
+	height: 150px;
+}
+.vic1.pic4{
+	background-position: -450px 0;
+	width: 150px;
+	height: 150px;
+}
+.vic1.pic5{
+	background-position: -600px 0;
+	width: 150px;
+	height: 150px;
+}
+DIV{
+	float: left;
+	
+}
+.p_1_1  {	background: url(img/p_1_1.png) no-repeat; }
+.p_1_2  {	background: url(img/p_1_2.png) no-repeat; }
+.p_1_3  {	background: url(img/p_1_3.png) no-repeat; }
+.p_1_4  {	background: url(img/p_1_4.png) no-repeat; }
+.p_1_5  {	background: url(img/p_1_5.png) no-repeat; }
+.p_1_6  {	background: url(img/p_1_6.png) no-repeat; }
+.p_1_7  {	background: url(img/p_1_7.png) no-repeat; }
+.p_1_8  { 	background: url(img/p_1_8.png) no-repeat; }
+.p_1_9  {	background: url(img/p_1_9.png) no-repeat; }
+.p_1_10 {	background: url(img/p_1_10.png) no-repeat; }
+.p_1_11 {	background: url(img/p_1_11.png) no-repeat; }
+.p_1_12 {	background: url(img/p_1_12.png) no-repeat; }
+
+
+.icon{
+	width:25%;
+	height: 14%;
+	padding: 0px;
+	background-size: 60%;
+	float: left;
+	background-color: grey;
+	background-position:center;
+}
+.icon:HOVER{
+	background-color: #336699;
+}
+
+#panel_input .icon{
+	height: 100%;
+	background-color: white;
+}
