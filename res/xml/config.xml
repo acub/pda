@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-    <feature name="Echo22">
-    	<param name="android-package" value="org.apache.cordova.plugin.Echo" />
-    </feature>
-    
-
-
